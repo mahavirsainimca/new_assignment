@@ -41,8 +41,8 @@
                                         <td>{{ $key->email }}</td>
                                         <td>{{ date('Y/m/d', strtotime($key->created_at)) }}</td>
                                         <td>
-                                            <a href="">
-                                                <button type="button" class="btn btn-primary btn-sm">Samulate</button>
+                                            <a target="_blank" href="{{ url('user-simulate/'.$key->id) }}">
+                                                <button type="button" class="btn btn-primary btn-sm">Simulate</button>
                                             </a>
 
                                         </td>

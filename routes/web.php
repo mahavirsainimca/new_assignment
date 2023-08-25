@@ -31,6 +31,8 @@ Route::group(['middleware' => ['auth:customer'] ], function(){
     Route::get('/profile', [App\Http\Controllers\Web\UserController::class, 'index'])->name('profile');
 });
 
+Route::get('/user-simulate/{id}', [App\Http\Controllers\Web\UserController::class, 'userSimulate'])->name('user-simulate');
+
 //Admin
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/login', [App\Http\Controllers\Admin\AdminAuthController::class, 'getLogin'])->name('adminLogin');
